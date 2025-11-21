@@ -1,0 +1,11 @@
+<svg width="480" height="320" viewBox="0 0 480 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="480" height="320" rx="28" fill="#F9F2E9"/>
+  <rect x="60" y="80" width="120" height="160" rx="20" fill="#6A2C2C" opacity="0.85"/>
+  <rect x="190" y="60" width="120" height="200" rx="20" fill="#7C3434" opacity="0.9"/>
+  <rect x="320" y="90" width="100" height="140" rx="20" fill="#B58F6E" opacity="0.95"/>
+  <circle cx="80" cy="60" r="24" fill="#F2F2F2"/>
+  <circle cx="380" cy="50" r="32" fill="#F2F2F2"/>
+  <text x="240" y="260" text-anchor="middle" font-family="Playfair Display, serif" font-size="32" fill="#2A2A2A">Bourgogne Masterclass</text>
+  <text x="240" y="292" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" fill="#6A2C2C">Nerve, terroir og finesse</text>
+</svg>
+

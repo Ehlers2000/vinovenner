@@ -1,0 +1,10 @@
+<svg width="600" height="360" viewBox="0 0 600 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="360" rx="32" fill="#F9F2E9"/>
+  <path d="M80 280C160 220 240 260 320 280C400 300 480 320 560 260L560 360H80V280Z" fill="#6A2C2C" opacity="0.55"/>
+  <rect x="120" y="100" width="100" height="160" rx="16" fill="#964141"/>
+  <rect x="240" y="80" width="110" height="200" rx="16" fill="#7C3434"/>
+  <rect x="370" y="120" width="90" height="140" rx="16" fill="#AC5A5A"/>
+  <text x="320" y="60" text-anchor="middle" font-family="Playfair Display, serif" font-size="40" fill="#2A2A2A">Guide til Bourgogne</text>
+  <text x="320" y="100" text-anchor="middle" font-family="Inter, sans-serif" font-size="20" fill="#6A2C2C">Find den ærlige nerve</text>
+</svg>
+

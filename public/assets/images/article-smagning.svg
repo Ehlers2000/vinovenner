@@ -1,0 +1,12 @@
+<svg width="600" height="360" viewBox="0 0 600 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="360" rx="32" fill="#FFF4D6"/>
+  <rect x="100" y="120" width="70" height="140" rx="16" fill="#FFD1A1"/>
+  <rect x="220" y="100" width="70" height="180" rx="16" fill="#FFB3A1"/>
+  <rect x="340" y="130" width="70" height="120" rx="16" fill="#F9F2E9"/>
+  <rect x="460" y="110" width="40" height="140" rx="12" fill="#F2F2F2"/>
+  <text x="120" y="90" font-family="Playfair Display, serif" font-size="34" fill="#6A2C2C">Blindsmagning</text>
+  <text x="120" y="120" font-family="Inter, sans-serif" font-size="18" fill="#6A2C2C">Sådan gør du det sjovt for vennerne</text>
+  <circle cx="340" cy="260" r="26" fill="#6A2C2C" opacity="0.3"/>
+  <circle cx="420" cy="230" r="18" fill="#003F2F" opacity="0.25"/>
+</svg>
+

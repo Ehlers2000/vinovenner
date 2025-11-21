@@ -1,0 +1,8 @@
+<svg width="640" height="360" viewBox="0 0 640 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="640" height="360" rx="28" fill="#2A2A2A"/>
+  <rect x="30" y="30" width="580" height="300" rx="24" fill="#6A2C2C"/>
+  <path d="M400 180L280 248V112L400 180Z" fill="#F9F2E9"/>
+  <text x="50%" y="80" text-anchor="middle" font-family="Playfair Display, serif" font-size="36" fill="#F9F2E9">Vinovenner</text>
+  <text x="50%" y="120" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" fill="#F9F2E9">Video placeholder</text>
+</svg>
+

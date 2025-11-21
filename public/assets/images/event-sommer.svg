@@ -1,0 +1,11 @@
+<svg width="480" height="320" viewBox="0 0 480 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="480" height="320" rx="28" fill="#FFF4D6"/>
+  <rect x="40" y="80" width="120" height="160" rx="16" fill="#FFD1A1"/>
+  <rect x="180" y="60" width="120" height="200" rx="16" fill="#FFB3A1"/>
+  <rect x="320" y="90" width="120" height="140" rx="16" fill="#F9F2E9"/>
+  <circle cx="380" cy="70" r="40" fill="#FFE5A1"/>
+  <text x="60" y="70" font-family="Playfair Display, serif" font-size="34" fill="#6A2C2C">Sommerterrasse</text>
+  <text x="60" y="105" font-family="Inter, sans-serif" font-size="18" fill="#6A2C2C">Rosé · Grill · DJ</text>
+  <text x="60" y="290" font-family="Inter, sans-serif" font-size="18" fill="#003F2F">21. juni · Aarhus</text>
+</svg>
+
