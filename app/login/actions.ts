@@ -11,9 +11,11 @@ export async function authenticate(password: string) {
   }
   
   if (password === correctPassword) {
+    // In production (Vercel), always use secure cookies for HTTPS
+    const isProduction = process.env.NODE_ENV === 'production' || process.env.VERCEL === '1'
     cookies().set('site-auth', 'authenticated', {
       httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
+      secure: isProduction,
       sameSite: 'lax',
       maxAge: 60 * 60 * 24 * 7, // 7 days
       path: '/',

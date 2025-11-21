@@ -2,8 +2,9 @@ import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
 export function middleware(request: NextRequest) {
-  // Check if password protection is enabled
-  const isPasswordProtected = process.env.ENABLE_PASSWORD_PROTECTION === 'true'
+  // Check if password protection is enabled (handle various truthy values)
+  const enablePasswordProtection = process.env.ENABLE_PASSWORD_PROTECTION
+  const isPasswordProtected = enablePasswordProtection === 'true' || enablePasswordProtection === '1'
   
   // If password protection is disabled, redirect away from login page
   if (!isPasswordProtected) {
