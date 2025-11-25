@@ -29,9 +29,9 @@ export const primaryNav: NavItem[] = [
 ];
 
 export const socialNav: SocialItem[] = [
-  { label: "Facebook", href: "https://www.facebook.com", iconSrc: "/facebook.png", width: 20, height: 20 },
-  { label: "Instagram", href: "https://www.instagram.com", iconSrc: "/instagram.png", width: 20, height: 20 },
-  { label: "YouTube", href: "https://www.youtube.com", iconSrc: "/youtube.png", width: 24, height: 16 },
+  { label: "Facebook", href: "https://www.facebook.com/vinovenner", iconSrc: "/facebook.png", width: 20, height: 20 },
+  { label: "Instagram", href: "https://www.instagram.com/vinovenner_", iconSrc: "/instagram.png", width: 20, height: 20 },
+  { label: "YouTube", href: "https://www.youtube.com/@vinovenner", iconSrc: "/youtube.png", width: 24, height: 16 },
 ];
 
 export const legalNav: LegalItem[] = [

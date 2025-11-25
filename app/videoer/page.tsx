@@ -89,7 +89,7 @@ export default function VideosPage() {
             Se, smag og lær med os. Vi dykker ned i vine, producenter og historier fra vinens verden.
           </p>
           <Button size="lg" className="mt-8" asChild>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://youtube.com/@vinovenner" target="_blank" rel="noopener noreferrer">
               <Youtube className="mr-2 h-5 w-5" />
               Abonner på YouTube
             </a>

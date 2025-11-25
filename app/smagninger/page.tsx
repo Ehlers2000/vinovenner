@@ -36,36 +36,6 @@ const experienceHighlights = [
   },
 ];
 
-const testimonials = [
-  {
-    quote:
-      "Vinovenner formår at ramme den perfekte balance mellem læring og hygge. Jeg gik hjem med masser af noter og et stort smil.",
-    name: "Katrine, deltager Bourgogne Masterclass",
-  },
-  {
-    quote:
-      "En rejseplan der føles som at være på tur med gode venner – vi fik adgang til producenter, man normalt aldrig møder.",
-    name: "Morten, deltager Nordrhône 2024",
-  },
-];
-
-const galleryItems = [
-  {
-    src: "/assets/images/event-bourgogne.svg",
-    alt: "Bourgogne masterclass",
-    label: "Masterclass i København",
-  },
-  {
-    src: "/assets/images/event-rhone.svg",
-    alt: "Rejse til Rhône",
-    label: "Vinrejse i Nordrhône",
-  },
-  {
-    src: "/assets/images/event-sommer.svg",
-    alt: "Sommerterrasse",
-    label: "Sommerterrasse i Aarhus",
-  },
-];
 
 const privateOptions = [
   "Firmaarrangementer med blindsmagning og quiz",
@@ -203,11 +173,6 @@ export default function EventsPage() {
               <a href="/kontakt">Planlæg privat event</a>
             </Button>
           </div>
-          <div className="mt-6 flex flex-wrap gap-4 text-sm text-cream-200">
-            <Stat label="Deltagere" value="2.500+" detail="siden 2021" />
-            <Stat label="Tilfredshed" value="4,8/5" detail="gennemsnitlig feedback" />
-            <Stat label="Events årligt" value="25" detail="i DK og udlandet" />
-          </div>
         </Container>
       </section>
 
@@ -247,50 +212,6 @@ export default function EventsPage() {
         </div>
       </Section>
 
-      <Section
-        kicker="Stemning"
-        headline="Glimt fra tidligere events"
-        spacing="tight"
-      >
-        <div className="grid gap-6 sm:grid-cols-3">
-          {galleryItems.map((item) => (
-            <figure
-              key={item.label}
-              className="overflow-hidden rounded-2xl border border-graphite-100 bg-white shadow-card"
-            >
-              <div className="relative h-48 w-full">
-                <Image
-                  src={item.src}
-                  alt={item.alt}
-                  fill
-                  sizes="(min-width: 640px) 200px, 100vw"
-                  className="object-cover"
-                />
-              </div>
-              <figcaption className="px-4 py-3 text-sm text-graphite-600">
-                {item.label}
-              </figcaption>
-            </figure>
-          ))}
-        </div>
-      </Section>
-
-      <Section
-        kicker="Det siger deltagerne"
-        headline="Feedback fra vinvenner"
-        spacing="tight"
-      >
-        <div className="grid gap-6 lg:grid-cols-2">
-          {testimonials.map((testimonial) => (
-            <Card key={testimonial.name} padding="lg" className="flex flex-col gap-4">
-              <p className="font-serif text-xl text-graphite-900">
-                "{testimonial.quote}"
-              </p>
-              <p className="text-sm font-semibold text-wine-700">{testimonial.name}</p>
-            </Card>
-          ))}
-        </div>
-      </Section>
 
       <Section
         kicker="Skræddersyet smagning?"
@@ -340,13 +261,6 @@ export default function EventsPage() {
   );
 }
 
-const Stat = ({ label, value, detail }: { label: string; value: string; detail: string }) => (
-  <div className="rounded-2xl border border-white/20 bg-white/10 px-5 py-4 text-cream-100 backdrop-blur">
-    <p className="text-xs uppercase tracking-wide text-cream-200">{label}</p>
-    <p className="font-serif text-2xl">{value}</p>
-    <p className="text-xs text-cream-200/80">{detail}</p>
-  </div>
-);
 
 const EventDetailModal = ({
   event,
