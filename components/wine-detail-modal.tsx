@@ -4,6 +4,7 @@ import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import { Modal } from "./ui/modal";
 import { Tag } from "./ui/tag";
+import { VideoButton } from "./video-button";
 import { videos } from "@/content";
 
 type WineDetailModalProps = {
@@ -118,21 +119,13 @@ export function WineDetailModal({ wine, open, onClose }: WineDetailModalProps) {
                 Relateret video
               </h4>
               <p className="text-sm text-graphite-600">{relatedVideo.title}</p>
-              <Button
-                asChild
-                variant="secondary"
-                className="w-full"
-                data-analytics="video-play"
-                data-video-id={relatedVideo.id}
+              <VideoButton
+                youtubeId={relatedVideo.youtubeId}
+                title={relatedVideo.title}
+                description={relatedVideo.description}
               >
-                <a
-                  href={`https://www.youtube.com/watch?v=${relatedVideo.youtubeId}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Se video
-                </a>
-              </Button>
+                Se video
+              </VideoButton>
             </div>
           )}
         </aside>

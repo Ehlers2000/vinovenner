@@ -6,6 +6,7 @@ import { ArrowLeft } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Tag } from "@/components/ui/tag";
+import { VideoButton } from "@/components/video-button";
 import { client, urlFor, winesQuery, videosQuery } from "@/lib/sanity";
 import type { Wine } from "@/lib/types";
 
@@ -211,19 +212,13 @@ export default async function WineDetailPage({ params }: { params: { id: string 
                 <div className="space-y-3 rounded-xl border border-border bg-card p-4">
                   <h3 className="text-sm font-semibold">Relateret video</h3>
                   <p className="text-sm text-muted-foreground">{relatedVideo.title}</p>
-                  <Button
-                    asChild
-                    variant="secondary"
-                    className="w-full"
+                  <VideoButton
+                    youtubeId={relatedVideo.youtubeId}
+                    title={relatedVideo.title}
+                    description={relatedVideo.description}
                   >
-                    <a
-                      href={`https://www.youtube.com/watch?v=${relatedVideo.youtubeId}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Se video
-                    </a>
-                  </Button>
+                    Se video
+                  </VideoButton>
                 </div>
               )}
 

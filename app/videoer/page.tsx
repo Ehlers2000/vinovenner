@@ -4,8 +4,10 @@ import { useEffect, useState } from "react";
 import { Youtube } from "lucide-react";
 
 import { VideoCard } from "@/components/cards/video-card";
+import { VideoPlayer } from "@/components/video-player";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Modal } from "@/components/ui/modal";
 import { client, videosQuery, urlFor } from "@/lib/sanity";
 import type { Video } from "@/lib/types";
 
@@ -21,6 +23,7 @@ export default function VideosPage() {
   const [videos, setVideos] = useState<Video[]>([]);
   const [loading, setLoading] = useState(true);
   const [activeCategory, setActiveCategory] = useState("all");
+  const [selectedVideo, setSelectedVideo] = useState<Video | null>(null);
 
   // Fetch videos from Sanity
   useEffect(() => {
@@ -55,8 +58,9 @@ export default function VideosPage() {
       ? videos
       : videos.filter((video) => video.categories.includes(activeCategory as any));
 
-  // Generate YouTube thumbnail URL
+  // Generate YouTube thumbnail URL with fallback
   const getYouTubeThumbnail = (youtubeId: string) => {
+    // Try maxresdefault first, fallback to hqdefault if not available
     return `https://img.youtube.com/vi/${youtubeId}/maxresdefault.jpg`;
   };
 
@@ -114,12 +118,10 @@ export default function VideosPage() {
           {filteredVideos.length > 0 ? (
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {filteredVideos.map((video) => (
-                <a
+                <button
                   key={video.id}
-                  href={`https://www.youtube.com/watch?v=${video.youtubeId}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block"
+                  onClick={() => setSelectedVideo(video)}
+                  className="block text-left"
                 >
                   <VideoCard
                     thumbnail={getYouTubeThumbnail(video.youtubeId)}
@@ -128,7 +130,7 @@ export default function VideosPage() {
                     category={video.categories[0] || "Video"}
                     description={video.description}
                   />
-                </a>
+                </button>
               ))}
             </div>
           ) : (
@@ -142,6 +144,33 @@ export default function VideosPage() {
           )}
         </div>
       </section>
+
+      {selectedVideo && (
+        <Modal
+          open={Boolean(selectedVideo)}
+          onClose={() => setSelectedVideo(null)}
+          title={selectedVideo.title}
+          description={selectedVideo.description}
+          size="lg"
+        >
+          <div className="space-y-4">
+            <VideoPlayer youtubeId={selectedVideo.youtubeId} title={selectedVideo.title} />
+            {selectedVideo.keyTakeaways && selectedVideo.keyTakeaways.length > 0 && (
+              <div className="space-y-2">
+                <h3 className="font-serif text-lg font-semibold text-graphite-900">Nøglepunkter</h3>
+                <ul className="space-y-2 text-sm text-graphite-600">
+                  {selectedVideo.keyTakeaways.map((takeaway, index) => (
+                    <li key={index} className="flex items-start gap-2">
+                      <span aria-hidden className="mt-1 block h-2 w-2 rounded-full bg-wine-700" />
+                      <span>{takeaway}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        </Modal>
+      )}
     </main>
   );
 }

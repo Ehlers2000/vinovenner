@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Container } from "@/components/ui/container";
 import { Tag } from "@/components/ui/tag";
+import { VideoButton } from "@/components/video-button";
 import { client, articlesQuery, winesQuery, videosQuery, urlFor } from "@/lib/sanity";
 
 type ArticlePageProps = {
@@ -318,15 +319,15 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                   <Card key={video!.id} padding="lg" className="flex flex-col gap-3">
                     <p className="font-serif text-xl text-graphite-900">{video!.title}</p>
                     <p className="text-sm text-graphite-600">{video!.description}</p>
-                    <Button variant="outline" asChild className="w-fit">
-                      <a
-                        href={`https://www.youtube.com/watch?v=${video!.youtubeId}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Se på YouTube
-                      </a>
-                    </Button>
+                    <VideoButton
+                      youtubeId={video!.youtubeId}
+                      title={video!.title}
+                      description={video!.description}
+                      variant="outline"
+                      className="w-fit"
+                    >
+                      Se video
+                    </VideoButton>
                   </Card>
                 ))}
               </div>
