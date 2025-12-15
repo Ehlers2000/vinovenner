@@ -32,3 +32,4 @@ export function VideoPlayer({ youtubeId, title, autoplay = true }: VideoPlayerPr
   )
 }
 
+
