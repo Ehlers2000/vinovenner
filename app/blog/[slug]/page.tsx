@@ -325,7 +325,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                       description={video!.description}
                       variant="outline"
                       className="w-fit"
-                    >
+                      >
                       Se video
                     </VideoButton>
                   </Card>

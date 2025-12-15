@@ -123,8 +123,8 @@ export function WineDetailModal({ wine, open, onClose }: WineDetailModalProps) {
                 youtubeId={relatedVideo.youtubeId}
                 title={relatedVideo.title}
                 description={relatedVideo.description}
-              >
-                Se video
+                >
+                  Se video
               </VideoButton>
             </div>
           )}

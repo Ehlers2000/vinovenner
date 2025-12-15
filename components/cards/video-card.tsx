@@ -21,14 +21,14 @@ export function VideoCard({ thumbnail, title, duration, category, description }:
     <div className="group cursor-pointer overflow-hidden rounded-2xl border border-border bg-card shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
       <div className="relative aspect-video overflow-hidden bg-graphite-100">
         {!imageError ? (
-          <Image
-            src={thumbnail}
-            alt={title}
-            fill
+        <Image
+          src={thumbnail}
+          alt={title}
+          fill
             className={`object-cover transition-opacity duration-300 group-hover:scale-105 ${
               imageLoading ? "opacity-0" : "opacity-100"
             }`}
-            sizes="(min-width: 1024px) 360px, (min-width: 768px) 320px, 100vw"
+          sizes="(min-width: 1024px) 360px, (min-width: 768px) 320px, 100vw"
             onLoad={() => setImageLoading(false)}
             onError={() => {
               setImageError(true);

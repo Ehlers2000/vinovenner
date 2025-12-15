@@ -216,8 +216,8 @@ export default async function WineDetailPage({ params }: { params: { id: string 
                     youtubeId={relatedVideo.youtubeId}
                     title={relatedVideo.title}
                     description={relatedVideo.description}
-                  >
-                    Se video
+                    >
+                      Se video
                   </VideoButton>
                 </div>
               )}
